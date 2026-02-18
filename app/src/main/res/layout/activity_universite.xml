@@ -10,14 +10,14 @@
         android:layout_height="80dp" />
 
     <WebView
-        android:id="@+id/departementWebView"
+        android:id="@+id/universiteWebView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
 
     <Button
-        android:id="@+id/departementBtnGif"
+        android:id="@+id/universiteBtnFermer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/departement_btn_gif" />
+        android:text="@string/universite_btn_fermer" />
 </LinearLayout>

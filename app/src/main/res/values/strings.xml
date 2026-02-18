@@ -5,16 +5,14 @@
     <string name="btn_universite_laval">Université Laval</string>
     <string name="btn_departement">Département de génie électrique et de génie informatique</string>
     <string name="btn_profil">Mon Profil</string>
-
     <string name="title_activity_mon_profil">MonProfilActivity</string>
     <string name="mon_profil_prenom">Prénom : </string>
     <string name="mon_profil_nom">Nom de famille : </string>
     <string name="mon_profil_date_naissance">Date de naissance : </string>
     <string name="mon_profil_idul">IDUL : </string>
     <string name="title_activity_universite">UniversiteActivity</string>
-    <string name="title_activity_maps">MapsActivity</string>
-
-    <string name="maps_btn_fermer">Fermer</string>
+    <string name="universite_btn_fermer">Fermer</string>
+    <string name="departement_btn_gif">GIF-3101</string>
     <string name="title_activity_departement">DepartementActivity</string>
 
 </resources>

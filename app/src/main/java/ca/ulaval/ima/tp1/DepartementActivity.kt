@@ -12,21 +12,24 @@ class DepartementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_departement)
 
-        val webView = findViewById<WebView>(R.id.webView)
-        val departementBtnFermer = findViewById<Button>(R.id.departementBtnFermer)
+        // Création des composants de l'activité
+        val departementWebView = findViewById<WebView>(R.id.departementWebView)
+        val departementBtnGif = findViewById<Button>(R.id.departementBtnGif)
 
         // Configuration du WebView
-        webView.settings.javaScriptEnabled = true
-        webView.webViewClient = WebViewClient() // Force l'ouverture dans l'app, pas le navigateur
+        departementWebView.settings.javaScriptEnabled = true
+        departementWebView.webViewClient = WebViewClient() // Force l'ouverture dans l'app, pas le navigateur
 
         // Récupéreration de l'URL envoyé par MainActivity
         val url = intent.getStringExtra("URL")
         if (url != null) {
-            webView.loadUrl(url)
+            // Affichage de la page Web
+            departementWebView.loadUrl(url)
         }
 
-        departementBtnFermer.setOnClickListener {
-            finish() // Revient à l'écran précédent
+        // Configuration du bouton GIF-3101 pour changer l'url affiché en cas de clic
+        departementBtnGif.setOnClickListener {
+            departementWebView.loadUrl("https://www.ulaval.ca/etudes/cours/gif-3101-informatique-mobile-et-applications")
         }
     }
 }

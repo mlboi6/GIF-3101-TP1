@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -15,20 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tp1">
         <activity
+            android:name=".UniversiteActivity"
+            android:exported="false"
+            android:label="@string/title_activity_universite"
+            android:theme="@style/Theme.Tp1"/>
+        <activity
             android:name=".DepartementActivity"
             android:exported="false"
             android:label="@string/title_activity_departement"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD-EkxvE44cYYXtqS9yOS67339vkRtrDMY" />
-
-        <activity
-            android:name=".MapsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_maps"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+            android:theme="@style/Theme.Tp1" />
         <activity
             android:name=".MonProfilActivity"
             android:exported="false"

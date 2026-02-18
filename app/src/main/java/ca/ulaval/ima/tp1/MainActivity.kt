@@ -2,29 +2,25 @@ package ca.ulaval.ima.tp1
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import ca.ulaval.ima.tp1.ui.theme.Tp1Theme
-import android.util.Log
 import android.widget.Button
 import android.content.Intent
+import java.time.LocalDate
 
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-
         setContentView(R.layout.activity_main)
 
-        // Définition des URL
+        // Configurer le profil
+        val profil = Profil(
+            "Marie-Laure",
+            "Boivin",
+            LocalDate.of(2003, 8, 5),
+            "536 978 305"
+        )
+
+        // Définition des URLs
         val urlToLoad = "https://maps.app.goo.gl/PQ7LVkryK9L892LD8"
         val urlToLoad2 = "https://www.fsg.ulaval.ca/departements/departement-de-genie-electrique-et-de-genie-informatique"
 
@@ -33,13 +29,15 @@ class MainActivity : ComponentActivity() {
         val btnDepartement = findViewById<Button>(R.id.mainBtnDepartement)
         val btnProfil = findViewById<Button>(R.id.mainBtnProfil)
 
-        // Navigation entre les activités
+        // Navigation entre les activités grâce aux boutons
         btnUniversite.setOnClickListener {
-            val intent = Intent(this, MapsActivity::class.java)
+            val intent = Intent(this, UniversiteActivity::class.java)
+            intent.putExtra("URL", urlToLoad)
             startActivity(intent)
         }
         btnProfil.setOnClickListener {
             val intent = Intent(this, MonProfilActivity::class.java)
+            intent.putExtra("Profil", profil)
             startActivity(intent)
         }
         btnDepartement.setOnClickListener {
@@ -47,21 +45,6 @@ class MainActivity : ComponentActivity() {
             intent.putExtra("URL", urlToLoad2)
             startActivity(intent)
         }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Tp1Theme {
-        Greeting("Android")
     }
 }
