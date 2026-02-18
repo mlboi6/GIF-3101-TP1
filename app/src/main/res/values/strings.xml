@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Tp1</string>
+
+    <string name="my_name">Marie-Laure Boivin</string>
+    <string name="btn_universite_laval">Université Laval</string>
+    <string name="btn_departement">Département de génie électrique et de génie informatique</string>
+    <string name="btn_profil">Mon Profil</string>
+
+    <string name="title_activity_mon_profil">MonProfilActivity</string>
+    <string name="mon_profil_prenom">Prénom : </string>
+    <string name="mon_profil_nom">Nom de famille : </string>
+    <string name="mon_profil_date_naissance">Date de naissance : </string>
+    <string name="mon_profil_idul">IDUL : </string>
+    <string name="title_activity_universite">UniversiteActivity</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="maps_btn_fermer">Fermer</string>
+    <string name="title_activity_departement">DepartementActivity</string>
+
 </resources>

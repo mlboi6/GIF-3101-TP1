@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/monProfilPrenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mon_profil_prenom" />
+
+    <TextView
+        android:id="@+id/monProfilNom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mon_profil_nom" />
+
+    <TextView
+        android:id="@+id/monProfilDateNaissance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mon_profil_date_naissance" />
+
+    <TextView
+        android:id="@+id/monProfilIdul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mon_profil_idul" />
+</LinearLayout>
