@@ -19,7 +19,7 @@ class MonProfilActivity : ComponentActivity() {
         // Cas 2: Version d'API ancienne < 33.0
         else {
             @Suppress("DEPRECATION")
-            intent.getParcelableExtra<Profil>("Profil")
+            intent.getParcelableExtra("Profil")
         }
 
         if (profil != null) {
