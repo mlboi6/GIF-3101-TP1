@@ -8,7 +8,6 @@ import androidx.activity.enableEdgeToEdge
 class MonProfilActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_monprofil)
 
         // Récupéreration de l'objet Profil envoyé par MainActivity
